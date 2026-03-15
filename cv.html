@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Curriculum Vitae</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cv-container {
+            max-width: 900px;
+            margin: var(--spacing-xl) auto;
+            padding: var(--spacing-xl);
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+        .cv-header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+        .cv-contact {
+            text-align: right;
+            color: var(--text-secondary);
+        }
+        .cv-section {
+            margin-bottom: var(--spacing-xl);
+        }
+        .cv-section h3 {
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .cv-item {
+            margin-bottom: 1.5rem;
+        }
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        .cv-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+        }
+        .cv-date {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        .cv-subtitle {
+            color: var(--accent-hover);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .cv-list {
+            list-style-position: inside;
+            color: var(--text-secondary);
+        }
+        .cv-list li {
+            margin-bottom: 0.3rem;
+        }
+        .download-btn {
+            display: block;
+            width: max-content;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">&lt;Dev/&gt;</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="cv.html" class="active">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Curriculum Vitae</h1>
+            <p>My academic background and technical experience.</p>
+        </div>
+    </header>
+
+    <section class="container">
+        
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <a href="cv.pdf" target="_blank" class="btn btn-primary download-btn"><i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF</a>
+        </div>
+
+        <div class="cv-container">
+            <div class="cv-header">
+                <div>
+                    <h1 style="font-size: 2.5rem; margin-bottom: 0;">Arafat Helal</h1>
+                    <p style="color: var(--accent-color); font-weight: 600; font-size: 1.2rem;">Full Stack Web Developer</p>
+                </div>
+                <div class="cv-contact">
+                    <p>arafathelal7@gmail.com <i class="fas fa-envelope" style="margin-left: 5px;"></i></p>
+                    <p>+88013099834432 <i class="fas fa-phone" style="margin-left: 5px;"></i></p>
+                    <p>Bashundhara R/A, Dhaka, Bangladesh <i class="fas fa-map-marker-alt" style="margin-left: 5px;"></i></p>
+                    <p><a href="https://www.linkedin.com/in/arafathelal/" target="_blank" style="color: inherit; text-decoration: none;">arafathelal <i class="fab fa-linkedin" style="margin-left: 5px; color: var(--accent-color);"></i></a></p>
+                    <p><a href="https://github.com/arafathelal" target="_blank" style="color: inherit; text-decoration: none;">arafathelal <i class="fab fa-github" style="margin-left: 5px; color: var(--text-primary);"></i></a></p>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-bullseye" style="margin-right: 8px;"></i> Career Objective</h3>
+                <p>Full Stack Developer with hands-on experience building web applications using PHP and MVC architecture, and responsive frontend technologies. Passionate about writing clean code and turning real-world needs into scalable backend solutions. Seeking to bring my problem-solving skills to a development team and continue growing as a full-stack web developer.</p>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-graduation-cap" style="margin-right: 8px;"></i> Education</h3>
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <span class="cv-title">American International University-Bangladesh</span>
+                        <span class="cv-date">2022 - 2026</span>
+                    </div>
+                    <div class="cv-subtitle">Bachelor of Science in Computer Science & Engineering</div>
+                    <p>CGPA: 3.79 / 4.00 (current)</p>
+                </div>
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <span class="cv-title">Chittagong Model School & College</span>
+                        <span class="cv-date">2020</span>
+                    </div>
+                    <div class="cv-subtitle">Higher Secondary Certificate</div>
+                    <p>GPA: 5.00</p>
+                </div>
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <span class="cv-title">Chittagong Govt. High School</span>
+                        <span class="cv-date">2017</span>
+                    </div>
+                    <div class="cv-subtitle">Secondary School Certificate</div>
+                    <p>GPA: 4.77</p>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-laptop-code" style="margin-right: 8px;"></i> Key Projects</h3>
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <span class="cv-title"><a href="https://autopulse.page.gd/Guest/public/index.php" target="_blank" style="color: inherit; text-decoration: underline;">AutoPulse Web Application</a></span>
+                        <span class="cv-date">2025</span>
+                    </div>
+                    <ul class="cv-list">
+                        <li>Developed a structured web application using PHP, MVC architecture, and MySQL.</li>
+                        <li>Implemented responsive and intuitive user interfaces.</li>
+                        <li>Gained hands-on experience in backend engineering and database management.</li>
+                    </ul>
+                </div>
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <span class="cv-title">Pharmacy Management App</span>
+                        <span class="cv-date">2026</span>
+                    </div>
+                    <ul class="cv-list">
+                        <li>Developed a robust application for pharmacy operations using C#.</li>
+                        <li>Integrated MySQL database for comprehensive inventory tracking, point-of-sale transactions, and billing management.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-cogs" style="margin-right: 8px;"></i> Technical Skills</h3>
+                <div class="cv-item">
+                    <p><strong>Frontend:</strong> HTML, CSS, JavaScript, React, Tailwind CSS, NextJS</p>
+                    <p><strong>Backend:</strong> PHP, NodeJS</p>
+                    <p><strong>Databases:</strong> MySQL, MongoDB</p>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-users" style="margin-right: 8px;"></i> Soft Skills</h3>
+                <div class="cv-item">
+                    <p>Problem Solving, Teamwork, Time Management, Analytical Thinking, Communication, Continuous Learning</p>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-heart" style="margin-right: 8px;"></i> Interests</h3>
+                <div class="cv-item">
+                    <p>Learning New Programming Technologies, Exploring Deep Learning Models, Photography</p>
+                </div>
+            </div>
+            
+            <div class="cv-section">
+                <h3><i class="fas fa-address-book" style="margin-right: 8px;"></i> References</h3>
+                <div class="cv-item">
+                    <p><strong>MD. Alomgir Kabir</strong><br>
+                    Assistant Professor, Faculty of Engineering, American International University-Bangladesh<br>
+                    akabir@aiub.edu | +8801789625623</p>
+                </div>
+                <div class="cv-item">
+                    <p><strong>Dhrubajit Das</strong><br>
+                    Software Engineer -L2, Brain Station 23<br>
+                    dhrubajitdas12@gmail.com | +8801533073951</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p class="footer-text">&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

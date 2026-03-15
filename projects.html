@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            padding: var(--spacing-lg);
+            transition: transform var(--transition-normal);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+        .project-card h3 {
+            color: var(--text-primary);
+            margin-top: var(--spacing-md);
+        }
+        .project-tech {
+            margin-top: auto;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            padding-top: var(--spacing-md);
+        }
+        .tech-tag {
+            font-size: 0.8rem;
+            padding: 0.2rem 0.8rem;
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent-color);
+            border-radius: 20px;
+            font-family: var(--font-mono);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">&lt;Dev/&gt;</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>A showcase of my recent work in web development and artificial intelligence.</p>
+        </div>
+    </header>
+
+    <section class="container" style="min-height: 50vh;">
+        <div class="projects-grid">
+            
+            <div class="project-card glass-panel">
+                <div style="font-size: 2rem; color: var(--accent-color);"><i class="fas fa-car"></i></div>
+                <h3>AutoPulse</h3>
+                <p>A structured web application built to solve real-world problems. Integrates a responsive user interface with robust backend architecture.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MVC Architecture</span>
+                    <span class="tech-tag">MySQL</span>
+                </div>
+                <a href="https://autopulse.page.gd/Guest/public/index.php" target="_blank" class="btn btn-primary" style="margin-top: 1rem; padding: 0.5rem 1rem; width: max-content;">View Details</a>
+            </div>
+            <div class="project-card glass-panel">
+                <div style="font-size: 2rem; color: var(--accent-color);"><i class="fas fa-pills"></i></div>
+                <h3>Pharmacy Management App</h3>
+                <p>A comprehensive application designed to streamline pharmacy operations, including inventory tracking, sales management, and efficient billing.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">.NET</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="margin-top: 1rem; padding: 0.5rem 1rem; width: max-content;">View Details</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p class="footer-text">&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

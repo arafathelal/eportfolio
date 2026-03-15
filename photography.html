@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Photography Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            aspect-ratio: 4 / 3;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: var(--spacing-md);
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+            color: #fff;
+            display: flex;
+            align-items: flex-end;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        /* Lightbox (Basic CSS target trick or modal) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 2001;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">&lt;Dev/&gt;</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="hobbies.html" class="active">Hobbies</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1><a href="hobbies.html" style="color: var(--text-secondary); text-decoration: none; font-size: 1.5rem; margin-right: 15px;"><i class="fas fa-arrow-left"></i></a> Photography Showcase</h1>
+            <p>A collection of moments captured through my lens.</p>
+        </div>
+    </header>
+
+    <section class="container" style="min-height: 50vh;">
+        <div class="gallery-grid">
+            
+            <div class="gallery-item" onclick="openLightbox('photography/WhatsApp Image 2026-03-15 at 11.30.29 AM.jpeg')">
+                <img src="photography/WhatsApp Image 2026-03-15 at 11.30.29 AM.jpeg" loading="lazy" alt="Photograph 1">
+                <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox('photography/WhatsApp Image 2026-03-15 at 11.30.30 AM (1).jpeg')">
+                <img src="photography/WhatsApp Image 2026-03-15 at 11.30.30 AM (1).jpeg" loading="lazy" alt="Photograph 2">
+                <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox('photography/WhatsApp Image 2026-03-15 at 11.30.30 AM (2).jpeg')">
+                <img src="photography/WhatsApp Image 2026-03-15 at 11.30.30 AM (2).jpeg" loading="lazy" alt="Photograph 3">
+                <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox('photography/WhatsApp Image 2026-03-15 at 11.30.30 AM (3).jpeg')">
+                <img src="photography/WhatsApp Image 2026-03-15 at 11.30.30 AM (3).jpeg" loading="lazy" alt="Photograph 4">
+                <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox('photography/WhatsApp Image 2026-03-15 at 11.30.30 AM.jpeg')">
+                <img src="photography/WhatsApp Image 2026-03-15 at 11.30.30 AM.jpeg" loading="lazy" alt="Photograph 5">
+                <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox('photography/WhatsApp Image 2026-03-15 at 11.30.31 AM (1).jpeg')">
+                <img src="photography/WhatsApp Image 2026-03-15 at 11.30.31 AM (1).jpeg" loading="lazy" alt="Photograph 6">
+                <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox('photography/WhatsApp Image 2026-03-15 at 11.30.31 AM.jpeg')">
+                <img src="photography/WhatsApp Image 2026-03-15 at 11.30.31 AM.jpeg" loading="lazy" alt="Photograph 7">
+                <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Expanded Photograph">
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <p class="footer-text">&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imageSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Home</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">&lt;Dev/&gt;</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="subtitle">Welcome to my portfolio</span>
+                <h1>Hi, I'm Arafat Helal.</h1>
+                <p>I build structured web applications, love artificial intelligence, and strive to craft practical
+                    software solutions that solve real-world problems.</p>
+                <div class="hero-actions" style="margin-top: 2rem;">
+                    <a href="projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="cv.html" class="btn"
+                        style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-primary); margin-left: 1rem;">View
+                        CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile.png" alt="Profile Picture">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-grid glass-panel">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I am a Computer Science and Engineering student at American International University-Bangladesh
+                    (AIUB) with a strong interest in full-stack web development and artificial intelligence.</p>
+                <p>Through academic projects such as <a href="https://autopulse.page.gd/Guest/public/index.php"
+                        target="_blank" style="color: var(--accent-color); text-decoration: underline;">AutoPulse</a>, I
+                    have gained hands-on experience building structured web applications using PHP, MVC architecture,
+                    and MySQL while developing responsive user interfaces.</p>
+                <p>I am also exploring research in artificial intelligence and explainable machine learning. I am
+                    passionate about learning new technologies and building practical software solutions that solve
+                    real-world problems.</p>
+            </div>
+            <div style="padding: 2rem; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start;">
+                <h3>Core Tech Stack</h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <span
+                        style="padding: 0.5rem 1rem; background: rgba(88,166,255,0.1); border: 1px solid var(--accent-color); border-radius: 20px; color: var(--accent-color);">PHP</span>
+                    <span
+                        style="padding: 0.5rem 1rem; background: rgba(88,166,255,0.1); border: 1px solid var(--accent-color); border-radius: 20px; color: var(--accent-color);">MySQL</span>
+                    <span
+                        style="padding: 0.5rem 1rem; background: rgba(88,166,255,0.1); border: 1px solid var(--accent-color); border-radius: 20px; color: var(--accent-color);">Vanilla
+                        JS</span>
+                    <span
+                        style="padding: 0.5rem 1rem; background: rgba(88,166,255,0.1); border: 1px solid var(--accent-color); border-radius: 20px; color: var(--accent-color);">HTML/CSS</span>
+                    <span
+                        style="padding: 0.5rem 1rem; background: rgba(88,166,255,0.1); border: 1px solid var(--accent-color); border-radius: 20px; color: var(--accent-color);">MVC
+                        Architecture</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Video Introduction</h2>
+            <div class="video-container glass-panel"
+                style="max-width: 412px; height: auto; padding-bottom: 0; margin: 0 auto; display: flex; justify-content: center; overflow: hidden;">
+                <video controls
+                    style="position: relative; width: 100%; height: auto; display: block; border-radius: 16px;">
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <h2>Let's Connect</h2>
+            <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/arafathelal" target="_blank" aria-label="Github"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/arafathelal/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:hello@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-text">&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
